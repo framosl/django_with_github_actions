@@ -66,7 +66,7 @@ jobs:
         export DATABASE_URL=postgres://${{ matrix.database-user }}:${{ matrix.database-password }}@${{ matrix.database-host }}:${{ matrix.database-port }}/${{ matrix.database-name }}
         export SECRET_KEY=test-secret-key
         export DEBUG=1
-        export DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1
+        export DJANGO_ALLOWED_HOSTS=localhost
     - name: Run migrations
       run: |
         export DATABASE_URL=postgres://${{ matrix.database-user }}:${{ matrix.database-password }}@${{ matrix.database-host }}:${{ matrix.database-port }}/${{ matrix.database-name }}
