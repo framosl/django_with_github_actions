@@ -68,11 +68,11 @@ jobs:
 
       - name: Build Docker images and start containers
         run: |
-          docker-compose -f docker-compose.yml build
-          docker-compose -f docker-compose.yml up -d
+          # Usa el comando moderno sin guion
+          docker compose -f docker-compose.yml build
+          docker compose -f docker-compose.yml up -d
 
       - name: Stop containers
         if: always()
-        run: docker-compose -f docker-compose.yml down
-
+        run: docker compose -f docker-compose.yml down
 
